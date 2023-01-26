@@ -1,6 +1,7 @@
 const express = require('express')
+var morgan = require('morgan')
 const app =  express()
-
+app.use(morgan('combined'))//log ra request from client
 app.get('/home',(req,res)=>{
     let a=5;
     let b=6;
